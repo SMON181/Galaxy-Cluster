@@ -17,7 +17,14 @@ body {
   margin-left: 10px;
 }
 #rectangle {
-  position: absolute; top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  z-index: 1;
+  position: relative; 
+  margin-left: 0px;
+  margin-right: 0px;
+  
+}
+#Text1 {
+  z-index: 2;
+  position: relative;
+  z-index: 1;
 }
