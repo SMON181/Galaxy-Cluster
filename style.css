@@ -19,12 +19,32 @@ body {
 #rectangle {
   z-index: 1;
   position: relative; 
-  margin-left: 0px;
-  margin-right: 0px;
-  
+    background: linear-gradient(45deg, rgb(30, 136, 229), rgb(24, 99, 164));
+  border-radius: 10px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  box-shadow: 0 0 15px rgb(63, 137, 201);
+  height: 8vh;
+  width: 95vw;
 }
-#Text1 {
+#gradient-box {
+  width: 95vw;
+  height: 2.5vh;
+  background: linear-gradient(45deg, rgb(176, 190, 187), rgb(125, 135, 133));
+  border-radius: 10px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  box-shadow: 0 0 15px rgb(200, 232, 225);
+#Head1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  margin: 0;
+  color: black; 
   z-index: 2;
-  position: relative;
-  z-index: 1;
 }
