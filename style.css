@@ -1,52 +1,66 @@
-
+/* Setup */
 body { 
-    text-align:center;
+    text-align: left;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     background: rgb(13, 13, 13);
-    color: rgb(171, 205, 226);
+    color: rgb(176, 190, 187);
 }
-#M42_1 {
+/* Images */
+#M42 {
   float:left;
-  margin-top: 10px;
+  margin-top: 120px;
   margin-left: 10px;
+  shape-outside: circle(40%);
+  clip-path: circle(50%);
+  
 }
 #Disks {
   float:Right;
-  margin-top: 10px;
+  margin-top: 550px;
   margin-left: 10px;
 }
-
+/* Objects*/
 #Topbar {
-  z-index: 1;
   position: fixed; 
-  top: 0;
-  left: 0;
-  width: auto;
-  height: 60px;
- object-fit: contain;
-}
-#gradient-box {
   top: 60px;
   left: 0;
+  z-index: 1000;
   width: 100%;
   height: 40px;
-  background: rgb(176, 190, 187);
+  background: rgb(19, 106, 219);
+  box-shadow: 0 0 15px rgb(35, 130, 255);
+  display: flex;
+  justify-content: center;
+  justify-content: flex-start;
+}
+#gradient-box {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgb(25, 97, 118);
   display: flex;
   justify-content: center;
   align-items: left;
   box-shadow: 0 0 15px rgb(200, 232, 225);
   position: fixed;
 }
+/* Text */
 #Head1 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); 
   margin: 0;
-  color: rgb(68, 186, 221); 
+  color: rgb(176, 190, 187); 
   z-index: 2;
 }
 #Text1 {
-  position: fixed;
-  margin-top: 200px;
+  position: relative;
+  margin-top: 0px;
+  text-align: left;
+}
+#Text2 {
+  position: relative;
+  margin-top: 400px;
 }
