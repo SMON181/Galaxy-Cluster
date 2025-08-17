@@ -1,18 +1,20 @@
 /* Setup */
 body { 
     text-align: left;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-    background: rgb(13, 13, 13);
-    color: rgb(176, 190, 187);
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.orbitron-Font {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 /* Images */
 #M42 {
   float:left;
   margin-top: 120px;
-  margin-left: 10px;
-  shape-outside: circle(40%);
-  clip-path: circle(50%);
-  
+  margin-left: 75px;
 }
 #Disks {
   float:Right;
@@ -20,47 +22,55 @@ body {
   margin-left: 10px;
 }
 /* Objects*/
-#Topbar {
+#topbar {
   position: fixed; 
   top: 60px;
-  left: 0;
+  z-index: 1000;
+  width: 80%;
+  height: 2px;
+  border-radius: 1.5px;
+  background: rgb(255, 255, 255);
+  left: 20px;
+}
+#backblocker {
+  position: fixed; 
+  top: 0;
   z-index: 1000;
   width: 100%;
-  height: 40px;
-  background: rgb(19, 106, 219);
-  box-shadow: 0 0 15px rgb(35, 130, 255);
-  display: flex;
-  justify-content: center;
-  justify-content: flex-start;
+  height: 59px;
+  border-radius: 1.5px;
+  background: rgb(0, 0, 0);
+  left: 0px;
 }
-#gradient-box {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background: rgb(25, 97, 118);
+#vertical-box {
+  top: 60px;
+  left: 500px;
+  width: 2px;
+  height: 100%;
+  border-radius: 1.5px;
+  background: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: left;
-  box-shadow: 0 0 15px rgb(200, 232, 225);
   position: fixed;
+  margin: 10px;
 }
 /* Text */
 #Head1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  margin: 0;
-  color: rgb(176, 190, 187); 
-  z-index: 2;
+  font-family: 'Orbitron', sans-serif;
+  position: fixed;
+  top: 5px;
+  left: 20px;
+  
+  
 }
-#Text1 {
+#text1 {
+  font-family: 'Orbitron', sans-serif;
   position: relative;
-  margin-top: 0px;
-  text-align: left;
+  margin-left: 575px;
 }
 #Text2 {
+   font-family: 'Orbitron', sans-serif;
   position: relative;
   margin-top: 400px;
 }
