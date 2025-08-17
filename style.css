@@ -14,24 +14,37 @@ body {
 /* Images */
 #m42 {
   float:left;
-  margin-top: 120px;
+  margin-top: 100px;
   margin-left: 75px;
 }
 #disks {
-  position: relative;
-  margin-top: 600px;
-  margin-left: 0px;
+  position: absolute;
+  margin-top: 505px;
+  margin-left: 82.5px;
+  left: 0px;
 }
 /* Objects*/
 #topbar {
   position: fixed; 
   top: 60px;
   z-index: 1000;
-  width: 80%;
+  width: auto;
   height: 1px;
   border-radius: 1.5px;
   background: rgb(255, 255, 255);
   left: 20px;
+  right: 20px;
+}
+#bar2 {
+  position: absolute; 
+  top: 490px;
+  z-index: 1000;
+  width: auto;
+  height: 1px;
+  border-radius: 1.5px;
+  background: rgb(255, 255, 255);
+  left: 20px;
+  right: 20px;
 }
 #backblocker {
   position: fixed; 
@@ -60,18 +73,33 @@ body {
   font-family: 'Orbitron', sans-serif;
   position: fixed;
   top: 5px;
-  left: 20px;
-  
-  
+  margin-left: 17px;
 }
 #text1 {
   font-family: 'Orbitron', sans-serif;
   position: relative;
   margin-left: 575px;
+  margin-right: 50px;
   width: fit-content;
 }
 #text2 {
    font-family: 'Orbitron', sans-serif;
   position: relative;
-  margin-top: 400px;
+  margin-top: 320px;
+  margin-left: 555px;
+  margin-right: 50px;
+}
+#coolguy{
+   font-family: 'Orbitron', sans-serif;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 555px;
+  margin-right: 50px;
+}
+#reference{
+   font-family: 'Orbitron', sans-serif;
+  position: relative;
+  margin-top: 30px;
+  margin-left: 555px;
+  margin-right: 50px;
 }
