@@ -74,11 +74,24 @@ body {
 }
 .star {
   box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.4);
-  position: absolute;
+  position: relative; /* Use fixed to keep stars in place relative to viewport */
   width: 1px;
   height: 1px;
   border-radius: 2px;
+  z-index: 0; /* Ensure stars are behind main content but above background */
   background-color: white;
+  animation: twinkle 2s infinite;
+
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
 }
 /* Text */
 #head1 {

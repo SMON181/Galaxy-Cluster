@@ -3,28 +3,60 @@
 <head>
   <style>
     html, body {
-      margin: 10;
-      padding: 10;
+      margin: 10px;
+      padding: 10px;
     }
   </style>
  <link rel="stylesheet" href="style.css" />  
 
-  <style>
-    #text1  {
-font-size: 17px;
-}
-#text2  {
-font-size: 17px;
-}
+<style>
+  #text1  {
+    font-size: 17px;
+  }
+  #text2  {
+    font-size: 17px;
+  }
+</style>  
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
-
-</style>  
 </head>  
 
  <body>
-   <div id="topbar"></div>
+  <div id="stars"></div>
+    <script>
+      const stars = document.getElementById('stars');
+// Make stars a fixed, full-screen background layer
+stars.style.position = 'fixed';
+stars.style.top = '0';
+stars.style.left = '0';
+stars.style.width = '100vw';
+stars.style.height = '100vh';
+stars.style.pointerEvents = 'none';
+stars.style.zIndex = '-1'; // Set to -1 so other content with default z-index stacks above
+
+for (let i = 0; i < 120; i++) {
+  const star = document.createElement('div');
+  star.classList.add('star');
+  const size = Math.random() * 2 + 1;
+  star.style.position = 'absolute';
+  star.style.background = 'white';
+  star.style.borderRadius = '50%';
+  star.style.width = `${size}px`;
+  star.style.height = `${size}px`;
+  star.style.top = `${Math.random() * 100}vh`;
+  star.style.left = `${Math.random() * 100}vw`;
+  star.style.opacity = Math.random() * 0.8 + 0.2;
+
+  // **Set a random animation delay between 0 and 2 seconds**
+  star.style.animationDelay = `${Math.random() * 2}s`;
+
+  stars.appendChild(star);
+}
+    </script>
+    
+   <div id="topbar">
+    
     
    <div id="backblocker">
  <h1 id="head1">The Orion Nebula</h1>
@@ -79,37 +111,5 @@ font-size: 17px;
 Reference: https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-42/</p1>
       
       </Div>
-<div id="stars"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script>
-function createStars(count) {
-  for (let i = 0; i < count; i++) {
-    drawStars();
-  }
-}
-
-function drawStars(){
-  var tmpStar = document.createElement('figure')
-  tmpStar.className = "star";
-  tmpStar.style.top = 100*Math.random()*1.22*3*1.22*5+'%';
-  tmpStar.style.left = 100*Math.random()*1.22*3*1.22*5+'%';
-  document.getElementById('stars').appendChild(tmpStar);
-}
-
-function selectStars() {
-    stars = document.querySelectorAll(".star");
-  console.log(stars)
-}
-
-function animateStars() {
-      Array.prototype.forEach.call(stars, function(el, i){
-      TweenMax.to(el, Math.random() * 0.5 + 0.5, {opacity: Math.random(), onComplete: animateStars});
-    });
-}
-
-createStars(200);
-selectStars();
-animateStars();
-</script>
 </body>
 </html> 
